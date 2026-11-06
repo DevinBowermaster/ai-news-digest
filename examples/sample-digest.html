@@ -1,0 +1,67 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5;color:#1d1d1f;max-width:680px;margin:0 auto;padding:16px"><h1 style="font-size:20px;margin:0 0 12px">AI &amp; IT digest: 2026-11-04</h1>
+<p>Top of this edition:</p>
+<ul>
+<li style="margin:0 0 6px">Patch: Relay Software Relay Remote Server (CVE-2099-10001)</li>
+<li style="margin:0 0 6px">Patch: Keystone Agent (CVE-2099-10002)</li>
+<li style="margin:0 0 6px">Update Keystone Agent for Windows to 6.2.1</li>
+</ul>
+<h2 style="font-size:16px;margin:24px 0 8px;border-bottom:1px solid #ddd;padding-bottom:4px">Security to act on</h2>
+<h3 style="font-size:15px;margin:16px 0 4px">P0: Relay Software Relay Remote Server (CVE-2099-10001)</h3>
+<ul>
+<li style="margin:0 0 6px">Relay Remote Server Authentication Bypass. Ranked P0 because: remote-access or RMM tool, EPSS 0.71.</li>
+<li style="margin:0 0 6px">Required action, from CISA: Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.</li>
+<li style="margin:0 0 6px">Added to the Known Exploited Vulnerabilities catalog on 2026-11-03. <a href="https://nvd.nist.gov/vuln/detail/CVE-2099-10001" style="color:#1a5fb4">NVD entry</a> <span style="color:#6b6b6b;font-size:12px">(nvd.nist.gov)</span></li>
+</ul>
+<h3 style="font-size:15px;margin:16px 0 4px">P0: Keystone Agent (CVE-2099-10002)</h3>
+<ul>
+<li style="margin:0 0 6px">Keystone Agent Privilege Escalation. Ranked P0 because: on your stack, EPSS 0.04.</li>
+<li style="margin:0 0 6px">Required action, from CISA: Apply mitigations per vendor instructions.</li>
+<li style="margin:0 0 6px">Added to the Known Exploited Vulnerabilities catalog on 2026-11-02. <a href="https://nvd.nist.gov/vuln/detail/CVE-2099-10002" style="color:#1a5fb4">NVD entry</a> <span style="color:#6b6b6b;font-size:12px">(nvd.nist.gov)</span></li>
+</ul>
+<h3 style="font-size:15px;margin:16px 0 4px">P1: Tessera NAS (CVE-2099-10003)</h3>
+<ul>
+<li style="margin:0 0 6px">Tessera NAS OS Command Injection. Ranked P1 because: known ransomware use, EPSS 0.09.</li>
+<li style="margin:0 0 6px">Required action, from CISA: Apply mitigations per vendor instructions.</li>
+<li style="margin:0 0 6px">Added to the Known Exploited Vulnerabilities catalog on 2026-10-30. <a href="https://nvd.nist.gov/vuln/detail/CVE-2099-10003" style="color:#1a5fb4">NVD entry</a> <span style="color:#6b6b6b;font-size:12px">(nvd.nist.gov)</span></li>
+</ul>
+<p>Also new in KEV, lower priority: CVE-2099-10004 (Quillsoft Quill PDF Editor).</p>
+<h3 style="font-size:15px;margin:16px 0 4px">Support ending soon</h3>
+<ul>
+<li style="margin:0 0 6px">Tessera OS 4.x: end of extended support on 2026-11-30. <a href="https://eol.example.org/tessera-os" style="color:#1a5fb4">lifecycle page</a> <span style="color:#6b6b6b;font-size:12px">(eol.example.org)</span></li>
+<li style="margin:0 0 6px">Orbit Server 2019: end of support on 2027-01-12. <a href="https://eol.example.org/orbit-server" style="color:#1a5fb4">lifecycle page</a> <span style="color:#6b6b6b;font-size:12px">(eol.example.org)</span></li>
+</ul>
+<h2 style="font-size:16px;margin:24px 0 8px;border-bottom:1px solid #ddd;padding-bottom:4px">Act on</h2>
+<ul>
+<li style="margin:0 0 6px"><strong>Update Keystone Agent for Windows to 6.2.1</strong> Versions before 6.2.1 let a signed-in user gain SYSTEM rights through the update service (CVSS 8.8). Keystone reports limited exploitation and no workaround. The agent is on every managed Windows device, so push the update through your RMM this week. <a href="https://keystone-id.example.com/security/KSA-2026-014" style="color:#1a5fb4">Keystone Identity advisories</a> <span style="color:#6b6b6b;font-size:12px">(keystone-id.example.com)</span>, official source.</li>
+</ul>
+<h2 style="font-size:16px;margin:24px 0 8px;border-bottom:1px solid #ddd;padding-bottom:4px">Changes clients will notice</h2>
+<ul>
+<li style="margin:0 0 6px"><strong>Orbit Mail blocks password-only IMAP and POP from January 15, 2027</strong> Mail clients must switch to OAuth. Old scanners and line-of-business apps that send mail with basic authentication will stop working. Run the Legacy sign-ins report for each client now and plan replacements before the cutoff. <a href="https://updates.orbit-workspace.example.com/2026/11/basic-auth-retirement" style="color:#1a5fb4">Orbit Workspace updates</a> <span style="color:#6b6b6b;font-size:12px">(updates.orbit-workspace.example.com)</span>, official source.</li>
+<li style="margin:0 0 6px"><strong>Proposed 72-hour incident reporting rule for small federal contractors</strong> Contractors with fewer than 100 employees would report covered cyber incidents within 72 hours. Comments close December 22, 2026. Clients with federal contracts may need an incident response plan that meets the deadline. <a href="https://rules.example.gov/documents/2026-24117" style="color:#1a5fb4">Federal rules search (sample)</a> <span style="color:#6b6b6b;font-size:12px">(rules.example.gov)</span>, official source.</li>
+<li style="margin:0 0 6px"><strong>Orbit Drive Business goes from $12.00 to $14.00 per user per month</strong> The new monthly price starts February 1, 2027; annual commitments renew at the new price after that date. Update client quotes and renewal notices. <a href="https://updates.orbit-workspace.example.com/2026/11/drive-business-pricing" style="color:#1a5fb4">Orbit Workspace updates</a> <span style="color:#6b6b6b;font-size:12px">(updates.orbit-workspace.example.com)</span>, official source.</li>
+</ul>
+<h2 style="font-size:16px;margin:24px 0 8px;border-bottom:1px solid #ddd;padding-bottom:4px">Worth offering</h2>
+<ul>
+<li style="margin:0 0 6px"><strong>Orbit Meet live captions are generally available</strong> Captions in 12 languages are included in Business Standard and Business Plus, and admins turn them on per organizational unit. An easy accessibility win to switch on for clients who run meetings with customers. <a href="https://updates.orbit-workspace.example.com/2026/11/meet-live-captions-ga" style="color:#1a5fb4">Orbit Workspace updates</a> <span style="color:#6b6b6b;font-size:12px">(updates.orbit-workspace.example.com)</span>, official source.</li>
+<li style="margin:0 0 6px"><strong>Lumen Enterprise audit logs can be exported or sent to a SIEM</strong> Admins can export 180 days of audit logs as CSV or stream them to a SIEM over HTTPS; it is generally available now. Clients with compliance requirements can now keep AI usage records with the rest of their logs. <a href="https://lumen-ai.example.com/changelog/audit-log-export" style="color:#1a5fb4">Lumen AI changelog</a> <span style="color:#6b6b6b;font-size:12px">(lumen-ai.example.com)</span>, official source.</li>
+</ul>
+<h2 style="font-size:16px;margin:24px 0 8px;border-bottom:1px solid #ddd;padding-bottom:4px">Good to know</h2>
+<ul>
+<li style="margin:0 0 6px"><strong>Lumen Assistant can search Orbit Drive shared drives</strong> The connector is in public preview for Team and Enterprise workspaces and follows each user&#39;s existing file permissions. Worth testing on an internal tenant before anyone pitches it. <a href="https://lumen-ai.example.com/changelog/shared-drive-connectors" style="color:#1a5fb4">Lumen AI changelog</a> <span style="color:#6b6b6b;font-size:12px">(lumen-ai.example.com)</span>, official source. (moved here: not generally available yet)</li>
+<li style="margin:0 0 6px"><strong>Forum reports of a Relay Remote Server flaw being exploited</strong> Community posts say attackers are reaching help desk machines through Relay Remote Server. The vendor has not commented. Watch for a vendor advisory; the KEV section above already lists a Relay Remote Server entry. <a href="https://it-weekly.example.net/2026/11/relay-remote-exploited" style="color:#1a5fb4">IT Weekly Roundup</a> <span style="color:#6b6b6b;font-size:12px">(it-weekly.example.net)</span>, unconfirmed. (moved here: not confirmed by the vendor yet)</li>
+</ul>
+<h2 style="font-size:16px;margin:24px 0 8px;border-bottom:1px solid #ddd;padding-bottom:4px">Held back for review</h2>
+<p>These items were fetched but their summaries failed a check, so only the original link is shown.</p>
+<ul>
+<li style="margin:0 0 6px"><a href="https://lumen-ai.example.com/changelog/team-usage-limits" style="color:#1a5fb4">Higher usage limits on the Lumen Team plan</a> <span style="color:#6b6b6b;font-size:12px">(lumen-ai.example.com)</span> (Lumen AI changelog): summary had numbers not in the source (500)</li>
+</ul>
+<h2 style="font-size:16px;margin:24px 0 8px;border-bottom:1px solid #ddd;padding-bottom:4px">Run health</h2>
+<ul>
+<li style="margin:0 0 6px">Sources: 6 feeds checked, 1 failed.<ul>
+<li style="margin:0 0 6px">Harbor Backup blog: GET <a href="https://harbor-backup.example.com/blog/rss.xml" style="color:#1a5fb4">https://harbor-backup.example.com/blog/rss.xml</a> <span style="color:#6b6b6b;font-size:12px">(harbor-backup.example.com)</span> -&gt; 500</li>
+</ul>
+</li>
+<li style="margin:0 0 6px">Model: claude-sonnet-5-5, 1 call, $0.0132 this run, $0.01 of $5.00 this month.</li>
+<li style="margin:0 0 6px">Skipped as not relevant: 2. Waiting for the next run: 0.</li>
+</ul>
+</body></html>
