@@ -1,0 +1,101 @@
+name: Digest
+
+# Sundays and Wednesdays at 12:00 UTC. Wednesday's run also catches the second-Tuesday patch releases.
+on:
+  schedule:
+    - cron: "0 12 * * 0"
+    - cron: "0 12 * * 3"
+  workflow_dispatch:
+    inputs:
+      send_email:
+        description: "Email the digest (otherwise it is only committed and uploaded)"
+        type: boolean
+        default: false
+
+# Two runs must never race on the ledger.
+concurrency:
+  group: digest
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  # Holds the model key. Cannot push, cannot send mail.
+  build:
+    if: github.event_name == 'workflow_dispatch' || vars.DIGEST_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Fetch, summarize, write the digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+          MONTHLY_BUDGET_USD: ${{ vars.MONTHLY_BUDGET_USD }}
+        run: npm run digest
+      - uses: actions/upload-artifact@v4
+        with:
+          name: digest
+          path: |
+            digests/
+            state/
+          retention-days: 14
+
+  # Holds the push token and the mail key. Never sees the model key or runs the model.
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - uses: actions/download-artifact@v4
+        with:
+          name: digest
+          path: ${{ runner.temp }}/digest
+      - name: Copy back only the expected files
+        id: copy
+        run: |
+          set -euo pipefail
+          A="$RUNNER_TEMP/digest"
+          if find "$A" ! -type f ! -type d | grep -q .; then echo "non-regular file in artifact, refusing"; exit 1; fi
+          mkdir -p digests state
+          for f in ledger.json budget.json; do
+            [ -f "$A/state/$f" ] || continue
+            node -e 'JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"))' "$A/state/$f"
+            cp "$A/state/$f" state/
+          done
+          f=$(ls "$A/digests" | grep -E '^[0-9]{4}-[0-9]{2}-[0-9]{2}\.md$' | sort | tail -1)
+          test -n "$f"
+          cp "$A/digests/$f" digests/
+          echo "file=digests/$f" >> "$GITHUB_OUTPUT"
+      - name: Commit digest and ledger
+        run: |
+          git config user.name "ai-news-digest"
+          git config user.email "ai-news-digest@users.noreply.github.com"
+          git add digests state
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -m "digest: ${{ steps.copy.outputs.file }}"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push
+      - name: Send email
+        if: inputs.send_email || (github.event_name == 'schedule' && vars.SEND_EMAIL == 'true')
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          DIGEST_TO: ${{ vars.DIGEST_TO }}
+          DIGEST_FROM: ${{ vars.DIGEST_FROM }}
+        run: npm run digest -- send "${{ steps.copy.outputs.file }}"
