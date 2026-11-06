@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Orbit Workspace updates</title>
+  <id>urn:example:orbit-updates</id>
+  <updated>2026-11-03T16:00:00Z</updated>
+  <entry>
+    <id>urn:example:orbit:2026-11-03-captions</id>
+    <title>Orbit Meet live captions are now generally available in 12 languages</title>
+    <link rel="alternate" href="https://updates.orbit-workspace.example.com/2026/11/meet-live-captions-ga"/>
+    <updated>2026-11-03T16:00:00Z</updated>
+    <summary type="html">&lt;p&gt;Live captions in Orbit Meet are now &lt;b&gt;generally available&lt;/b&gt; on the Business Standard and Business Plus plans, in 12 languages. Admins can turn captions on per organizational unit. No extra license is required.&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <id>urn:example:orbit:2026-11-02-basic-auth</id>
+    <title>Orbit Mail will stop accepting basic authentication for IMAP and POP</title>
+    <link rel="alternate" href="https://updates.orbit-workspace.example.com/2026/11/basic-auth-retirement"/>
+    <updated>2026-11-02T15:30:00Z</updated>
+    <summary type="html">&lt;p&gt;Starting January 15, 2027, Orbit Mail rejects IMAP and POP sign-ins that use a password alone. Mail clients must use OAuth. Older scanners and line-of-business apps that send mail with basic authentication will stop working. A report of affected sign-ins is available in the admin console under Reports &amp;gt; Legacy sign-ins.&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <id>urn:example:orbit:2026-11-01-price</id>
+    <title>Orbit Drive Business price change</title>
+    <link rel="alternate" href="https://updates.orbit-workspace.example.com/2026/11/drive-business-pricing"/>
+    <updated>2026-11-01T14:00:00Z</updated>
+    <summary>The Orbit Drive Business plan moves from $12.00 to $14.00 per user per month for monthly billing on February 1, 2027. Annual commitments renew at the new price after that date.</summary>
+  </entry>
+  <entry>
+    <id>urn:example:orbit:2026-10-31-webinar</id>
+    <title>Join the Orbit Partner webinar: Winning in 2027</title>
+    <link rel="alternate" href="https://updates.orbit-workspace.example.com/2026/10/partner-webinar"/>
+    <updated>2026-10-31T18:00:00Z</updated>
+    <summary>Register now for our partner webinar with three special guests.</summary>
+  </entry>
+  <entry>
+    <id>urn:example:orbit:2026-10-01-old</id>
+    <title>Orbit Calendar adds working locations</title>
+    <link rel="alternate" href="https://updates.orbit-workspace.example.com/2026/10/working-locations"/>
+    <updated>2026-10-01T12:00:00Z</updated>
+    <summary>Older than the first-run window, so it never reaches the digest.</summary>
+  </entry>
+</feed>

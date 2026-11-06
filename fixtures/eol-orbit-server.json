@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.2.0",
+  "result": {
+    "name": "orbit-server",
+    "label": "Orbit Server",
+    "links": { "html": "https://eol.example.org/orbit-server" },
+    "releases": [
+      { "name": "2019", "label": "2019", "eolFrom": "2027-01-12", "eoesFrom": "2030-01-08" },
+      { "name": "2022", "label": "2022", "eolFrom": "2031-10-14", "eoesFrom": null }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.2.0",
+  "result": {
+    "name": "tessera-os",
+    "label": "Tessera OS",
+    "links": { "html": "https://eol.example.org/tessera-os" },
+    "releases": [
+      { "name": "4", "label": "4.x", "eolFrom": "2026-06-30", "eoesFrom": "2026-11-30" },
+      { "name": "5", "label": "5.x", "eolFrom": "2028-06-30", "eoesFrom": null }
+    ]
+  }
+}

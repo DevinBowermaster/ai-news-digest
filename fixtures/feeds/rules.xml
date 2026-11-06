@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Rules search: cyber incident</title>
+    <link>https://rules.example.gov/search</link>
+    <item>
+      <title>Proposed rule: cyber incident reporting for small federal contractors</title>
+      <link>https://rules.example.gov/documents/2026-24117</link>
+      <guid>2026-24117</guid>
+      <pubDate>Mon, 02 Nov 2026 13:00:00 GMT</pubDate>
+      <description>The proposed rule would require contractors with fewer than 100 employees to report covered cyber incidents within 72 hours. Comments close December 22, 2026.</description>
+    </item>
+  </channel>
+</rss>

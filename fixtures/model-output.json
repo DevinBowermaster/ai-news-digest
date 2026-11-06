@@ -1,0 +1,65 @@
+{
+  "Orbit Meet live captions are now generally available in 12 languages": {
+    "kind": "opportunity",
+    "headline": "Orbit Meet live captions are generally available",
+    "summary": "Captions in 12 languages are included in Business Standard and Business Plus, and admins turn them on per organizational unit.",
+    "whyItMatters": "An easy accessibility win to switch on for clients who run meetings with customers.",
+    "availability": "generally-available"
+  },
+  "Orbit Mail will stop accepting basic authentication for IMAP and POP": {
+    "kind": "change",
+    "headline": "Orbit Mail blocks password-only IMAP and POP from January 15, 2027",
+    "summary": "Mail clients must switch to OAuth. Old scanners and line-of-business apps that send mail with basic authentication will stop working.",
+    "whyItMatters": "Run the Legacy sign-ins report for each client now and plan replacements before the cutoff.",
+    "availability": "announced"
+  },
+  "Orbit Drive Business price change": {
+    "kind": "change",
+    "headline": "Orbit Drive Business goes from $12.00 to $14.00 per user per month",
+    "summary": "The new monthly price starts February 1, 2027; annual commitments renew at the new price after that date.",
+    "whyItMatters": "Update client quotes and renewal notices.",
+    "availability": "announced"
+  },
+  "KSA-2026-014: Keystone Agent 6.2.1 fixes a local privilege escalation": {
+    "kind": "action",
+    "headline": "Update Keystone Agent for Windows to 6.2.1",
+    "summary": "Versions before 6.2.1 let a signed-in user gain SYSTEM rights through the update service (CVSS 8.8). Keystone reports limited exploitation and no workaround.",
+    "whyItMatters": "The agent is on every managed Windows device, so push the update through your RMM this week.",
+    "availability": "generally-available"
+  },
+  "Shared drive connectors for Lumen Assistant enter public preview": {
+    "kind": "opportunity",
+    "headline": "Lumen Assistant can search Orbit Drive shared drives",
+    "summary": "The connector is in public preview for Team and Enterprise workspaces and follows each user's existing file permissions.",
+    "whyItMatters": "Worth testing on an internal tenant before anyone pitches it.",
+    "availability": "preview"
+  },
+  "Higher usage limits on the Lumen Team plan": {
+    "kind": "fyi",
+    "headline": "Lumen Team plan limits rise to 500 messages a day",
+    "summary": "Team members get 500 messages per day, resetting every 5 hours.",
+    "whyItMatters": "Fewer limit complaints from heavy users.",
+    "availability": "generally-available"
+  },
+  "Admin audit log export for Lumen Enterprise": {
+    "kind": "opportunity",
+    "headline": "Lumen Enterprise audit logs can be exported or sent to a SIEM",
+    "summary": "Admins can export 180 days of audit logs as CSV or stream them to a SIEM over HTTPS; it is generally available now.",
+    "whyItMatters": "Clients with compliance requirements can now keep AI usage records with the rest of their logs.",
+    "availability": "generally-available"
+  },
+  "Proposed rule: cyber incident reporting for small federal contractors": {
+    "kind": "change",
+    "headline": "Proposed 72-hour incident reporting rule for small federal contractors",
+    "summary": "Contractors with fewer than 100 employees would report covered cyber incidents within 72 hours. Comments close December 22, 2026.",
+    "whyItMatters": "Clients with federal contracts may need an incident response plan that meets the deadline.",
+    "availability": "announced"
+  },
+  "Report: Relay Remote flaw exploited against help desks": {
+    "kind": "action",
+    "headline": "Forum reports of a Relay Remote Server flaw being exploited",
+    "summary": "Community posts say attackers are reaching help desk machines through Relay Remote Server. The vendor has not commented.",
+    "whyItMatters": "Watch for a vendor advisory; the KEV section above already lists a Relay Remote Server entry.",
+    "availability": "not-applicable"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "https://updates.orbit-workspace.example.com/feed.atom": "feeds/orbit.atom",
+  "https://keystone-id.example.com/security/rss.xml": "feeds/keystone.xml",
+  "https://lumen-ai.example.com/changelog/rss.xml": "feeds/lumen.xml",
+  "https://rules.example.gov/search/cyber-incident.rss": "feeds/rules.xml",
+  "https://it-weekly.example.net/feed.xml": "feeds/roundup.xml",
+  "https://harbor-backup.example.com/blog/rss.xml": "!500",
+  "https://kev.example.gov/known_exploited_vulnerabilities.json": "kev.json",
+  "https://epss.example.org/data/v1/epss": "epss.json",
+  "https://eol.example.org/api/v1/products/orbit-server": "eol-orbit-server.json",
+  "https://eol.example.org/api/v1/products/tessera-os": "eol-tessera-os.json"
+}

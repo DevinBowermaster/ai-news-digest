@@ -1,0 +1,23 @@
+{
+  "audience": "A five-person IT team at a managed service provider that supports about 40 small businesses. They want to know what to patch, what clients will notice, and what is worth offering.",
+  "feeds": [
+    { "name": "Orbit Workspace updates", "url": "https://updates.orbit-workspace.example.com/feed.atom", "tier": "T1", "topic": "platforms" },
+    { "name": "Keystone Identity advisories", "url": "https://keystone-id.example.com/security/rss.xml", "tier": "T1", "topic": "security" },
+    { "name": "Lumen AI changelog", "url": "https://lumen-ai.example.com/changelog/rss.xml", "tier": "T1", "topic": "ai" },
+    { "name": "Federal rules search (sample)", "url": "https://rules.example.gov/search/cyber-incident.rss", "tier": "T1", "topic": "compliance" },
+    { "name": "IT Weekly Roundup", "url": "https://it-weekly.example.net/feed.xml", "tier": "T4", "topic": "security" },
+    { "name": "Harbor Backup blog", "url": "https://harbor-backup.example.com/blog/rss.xml", "tier": "T1", "topic": "platforms" }
+  ],
+  "kev": {
+    "url": "https://kev.example.gov/known_exploited_vulnerabilities.json",
+    "epssUrl": "https://epss.example.org/data/v1/epss",
+    "stack": ["Keystone", "Orbit", "Harbor"],
+    "remoteAccessTools": ["Relay Remote"],
+    "epssP1": 0.1
+  },
+  "endOfLife": {
+    "api": "https://eol.example.org/api/v1/products",
+    "products": ["orbit-server", "tessera-os"],
+    "horizonDays": 120
+  }
+}

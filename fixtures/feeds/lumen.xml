@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Lumen AI changelog</title>
+    <link>https://lumen-ai.example.com/changelog</link>
+    <item>
+      <title>Shared drive connectors for Lumen Assistant enter public preview</title>
+      <link>https://lumen-ai.example.com/changelog/shared-drive-connectors</link>
+      <guid>https://lumen-ai.example.com/changelog/shared-drive-connectors</guid>
+      <pubDate>Tue, 03 Nov 2026 09:00:00 GMT</pubDate>
+      <description>Lumen Assistant can now search Orbit Drive shared drives, in public preview for Team and Enterprise workspaces. Connector access follows each user's existing file permissions.</description>
+    </item>
+    <item>
+      <title>Higher usage limits on the Lumen Team plan</title>
+      <link>https://lumen-ai.example.com/changelog/team-usage-limits</link>
+      <guid>https://lumen-ai.example.com/changelog/team-usage-limits</guid>
+      <pubDate>Fri, 30 Oct 2026 20:00:00 GMT</pubDate>
+      <description>Team plan members get higher daily usage limits starting today. Limits reset every 5 hours.</description>
+    </item>
+    <item>
+      <title>Admin audit log export for Lumen Enterprise</title>
+      <link>https://lumen-ai.example.com/changelog/audit-log-export</link>
+      <guid>https://lumen-ai.example.com/changelog/audit-log-export</guid>
+      <pubDate>Thu, 29 Oct 2026 16:00:00 GMT</pubDate>
+      <description>Enterprise admins can now export 180 days of audit logs as CSV or send them to a SIEM over HTTPS. Generally available today.</description>
+    </item>
+  </channel>
+</rss>

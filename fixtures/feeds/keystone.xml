@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Keystone Identity security advisories</title>
+    <link>https://keystone-id.example.com/security</link>
+    <item>
+      <title>KSA-2026-014: Keystone Agent 6.2.1 fixes a local privilege escalation</title>
+      <link>https://keystone-id.example.com/security/KSA-2026-014</link>
+      <guid isPermaLink="false">KSA-2026-014</guid>
+      <pubDate>Mon, 02 Nov 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[<p>Keystone Agent for Windows before 6.2.1 lets a signed-in user gain SYSTEM rights through the update service (CVSS 8.8). Update to 6.2.1. Keystone says the flaw is being exploited in limited attacks. There is no workaround.</p>]]></description>
+    </item>
+  </channel>
+</rss>
